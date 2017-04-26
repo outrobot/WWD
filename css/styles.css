@@ -1,0 +1,111 @@
+@font-face {
+ font-family: 'Gothamy';
+ src: local('Gotham Book'), local('Gotham-Book');
+ font-weight: normal;
+ font-style: normal;
+ font-variant: normal;
+}
+@font-face {
+ font-family: 'GothamyBold';
+ src: local('Gotham Bold'), local('Gotham-Bold');
+ font-weight: bold;
+ font-style: normal;
+ font-variant: normal;
+}
+body {
+ font-family: GothamyBold, Gotham-Book, Arial, sans-serif;
+ text-align: center;
+}
+
+img.bkg {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.windpointer {
+	position: absolute;
+	top: 317px;
+    left: 884px;
+    transform: rotate(0deg);
+}
+
+.temp{
+	font-size: 15em;
+    position: absolute;
+    top: 280px;
+    left: 1080px;
+    color: white;
+    width: 550px;
+}
+
+.windspeed {
+	font-size: 5em;
+    position: absolute;
+    top: 530px;
+    left: 760px;
+    color: white;
+    width: 300px;
+}
+
+.subtext {
+	font-size: .6em;
+}
+
+.small-data {
+	font-size: 5em;
+	color: white;
+	font-family: Gothamy, Gotham-Book, Arial, sans-serif;
+	position: absolute;
+	top: 680px;
+}
+
+.heatchill {
+	position: inherit;
+	left: 770px;
+    width: 240px;
+}
+
+.humidity {
+	position: inherit;
+	left: 1077px;
+    width: 240px;
+}
+
+.pressure {
+	position: inherit;
+    left: 1400px;
+    width: 240px;
+}
+
+.small-labels {
+	font-size: 2em;
+	color: white;
+	font-family: Gothamy, Gotham-Book, Arial, sans-serif;
+	position: absolute;
+	top: 765px;
+}
+
+.label {
+	position: inherit;
+	width: 260px;
+}
+
+.label-one {
+	position: inherit;
+    left: 760px;
+}
+
+.label-two {
+	position: inherit;
+	left: 1060px;
+}
+
+.label-three {
+	position: inherit;
+    left: 1385px;
+}
+
+.hidden {
+	display: none;
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Mobile Weather Watcher - Right Now</title>
+  <meta name="description" content="Mobile Weather Watcher - Right Now">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<img class="bkg" src="img/bkg.png">
+	<img class="windpointer mtAdjWindDir" src="img/pointer.png">
+	<div class="temp"><span class="mtTemp1"></span>°</div>
+	<div class="windspeed"><span class="mtWindSpeed"></span><span class="subtext">mph</span></div>
+	<div class="small-data">
+		<div class="heatchill heatindex"><span class="mtHeatIndex"></span>°</div>
+		<div class="heatchill windchill hidden"><span class="mtWindChill"></span>°</div>
+		<div class="humidity"><span class="mtRelHumidity"></span>%</div>
+		<div class="pressure"><span class="mtAdjBaromPress"></span></div>
+	</div>
+	<div class="small-labels">
+		<div class="label label-one heatindex">heat index</div>
+		<div class="label label-one windchill">wind chill</div>
+		<div class="label label-two">dew point</div>
+		<div class="label label-three">pressure</div>
+	</div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/xreader.js"></script> 
+  <script src="js/weatherxml.js"></script>
+</body>
+</html>
