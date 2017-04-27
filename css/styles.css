@@ -28,6 +28,10 @@ img.bkg {
 	top: 317px;
     left: 884px;
     transform: rotate(0deg);
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 .temp{

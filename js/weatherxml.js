@@ -13,12 +13,15 @@ $(document).ready(function(){
     {
         $('.heatindex').removeClass('hidden');
         $('.windchill').addClass('hidden');
+        $('.dewpoint').addClass('hidden');
     } else if(temp < 40){
         $('.heatindex').addClass('hidden');
+        $('.dewpoint').addClass('hidden');
         $('.windchill').removeClass('hidden');
     } else {
         $('.heatindex').addClass('hidden');
         $('.windchill').addClass('hidden');
+        $('.dewpoint').removeClass('hidden');
     }
 
     //but if it's multible items then loop
@@ -32,7 +35,7 @@ $(document).ready(function(){
                 $('.' + $(this).attr('name')).text(Math.round($(this).text()));
                 break;
             case 'mtAdjWindDir':
-                $('.' + $(this).attr('name')).css('transform','rotate(' + (parseInt($(this).text()) + 180) + 'deg)');
+                $('.' + $(this).attr('name')).css('transform','rotate(' + (parseInt($(this).text())) + 'deg)');
                 break;
             default:
                 $('.' + $(this).attr('name')).text($(this).text());
