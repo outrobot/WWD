@@ -2,7 +2,7 @@ $(document).ready(function(){
     (function fetchData() {
         $.ajax({
             type: "GET" ,
-            url: "latestsampledata.xml" ,
+            url: "fetch.php" ,
             dataType: "xml" ,
             success: function(xml) {
 
