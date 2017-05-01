@@ -1,28 +1,27 @@
 @font-face {
  font-family: 'Gothamy';
  src: local('Gotham Book'), local('Gotham-Book');
- font-weight: normal;
+ font-weight: bold;
  font-style: normal;
  font-variant: normal;
 }
 @font-face {
  font-family: 'GothamyBold';
  src: local('Gotham Bold'), local('Gotham-Bold');
- font-weight: bold;
+ font-weight: normal;
  font-style: normal;
  font-variant: normal;
 }
 @font-face {
  font-family: 'GothamyBlack';
  src: local('Gotham Black'), local('Gotham-Black');
- font-weight: bold;
+ font-weight: normal;
  font-style: normal;
  font-variant: normal;
 }
 body {
  font-family: GothamyBold, Gotham-Book, Arial, sans-serif;
  text-align: center;
- font-weight: bold;
 }
 
 img.bkg {
@@ -52,7 +51,7 @@ img.bkg {
 }
 
 .windspeed {
-	font-family: GothamyBold, Gotham-Book, Arial, sans-serif;
+	font-family: GothamyBlack, Gotham-Book, Arial, sans-serif;
 	font-size: 5em;
     position: absolute;
     top: 530px;
@@ -66,7 +65,7 @@ img.bkg {
 }
 
 .large-data {
-	font-family: GothamyBold, Gotham-Book, Arial, sans-serif;
+	font-family: GothamyBlack, Gotham-Bold, Arial, sans-serif;
 }
 
 .small-data {
