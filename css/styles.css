@@ -12,6 +12,13 @@
  font-style: normal;
  font-variant: normal;
 }
+@font-face {
+ font-family: 'GothamyBlack';
+ src: local('Gotham Black'), local('Gotham-Black');
+ font-weight: bold;
+ font-style: normal;
+ font-variant: normal;
+}
 body {
  font-family: GothamyBold, Gotham-Book, Arial, sans-serif;
  text-align: center;
@@ -45,6 +52,7 @@ img.bkg {
 }
 
 .windspeed {
+	font-family: GothamyBold, Gotham-Book, Arial, sans-serif;
 	font-size: 5em;
     position: absolute;
     top: 530px;
@@ -55,6 +63,10 @@ img.bkg {
 
 .subtext {
 	font-size: .6em;
+}
+
+.large-data {
+	font-family: GothamyBold, Gotham-Book, Arial, sans-serif;
 }
 
 .small-data {
