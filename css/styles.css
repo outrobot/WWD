@@ -13,8 +13,9 @@
  font-variant: normal;
 }
 body {
- font-family: 'Muli', GothamyBold, Gotham-Book, Arial, sans-serif;
+ font-family: GothamyBold, Gotham-Book, Arial, sans-serif;
  text-align: center;
+ font-weight: bold;
 }
 
 img.bkg {
