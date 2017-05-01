@@ -6,7 +6,6 @@ $(document).ready(function(){
             dataType: "xml" ,
             success: function(xml) {
 
-            //var xmlDoc = $.parseXML( xml );   <------------------this line
             //if single item
             var temp = $(xml).find('meas[name="mtTemp1"]').text();  
 
