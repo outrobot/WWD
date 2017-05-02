@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    var oldWindDir = 0;
     (function fetchData() {
         $.ajax({
             type: "GET" ,
@@ -6,6 +7,7 @@ $(document).ready(function(){
             dataType: "xml" ,
             success: function(xml) {
 
+            //var xmlDoc = $.parseXML( xml );   <------------------this line
             //if single item
             var temp = $(xml).find('meas[name="mtTemp1"]').text();  
 
@@ -34,8 +36,38 @@ $(document).ready(function(){
                     case 'mtWindChill':
                         $('.' + $(this).attr('name')).text(Math.round($(this).text()));
                         break;
-                    case 'mtAdjWindDir':
-                        $('.' + $(this).attr('name')).css('transform','rotate(' + (parseInt($(this).text())) + 'deg)');
+                    case 'mt3SecRollAvgWindDir':
+                        var windDiff;
+                        var newWindDir = parseInt($(this).text()) + 36000;  // add in 10 rotations to start
+                        if(oldWindDir == 0) { // set initial direction if first run
+                            oldWindDir = newWindDir;
+                            $('.' + $(this).attr('name')).css('transform','rotate(' + (newWindDir) + 'deg)');
+                            break;
+                        }
+                        
+                        if((newWindDir % 360) == (oldWindDir % 360)) { // break if the number hasn't changed
+                            break;
+                        }
+
+                        // calculate difference in direcitons (10 rotations added in initially)
+                        if((oldWindDir % 360) > (newWindDir % 360)) {  
+                            windDiff = (oldWindDir % 360) - (newWindDir % 360);
+                            if(windDiff > 180) {
+                                newWindDir = oldWindDir - windDiff + 360;  // spin backwards
+                            } else {
+                                newWindDir = oldWindDir - windDiff; // spin forwards
+                            }
+                        } else {
+                            windDiff = (newWindDir % 360) - (oldWindDir % 360);
+                            if(windDiff > 180) {
+                                newWindDir = oldWindDir + windDiff - 360;  // spin forwards
+                            } else {
+                                newWindDir = oldWindDir + windDiff; // spin backwards
+                            }
+                        }
+                        $('.' + $(this).attr('name')).css('transform','rotate(' + (newWindDir) + 'deg)');
+                        oldWindDir = newWindDir;
+
                         break;
                     default:
                         $('.' + $(this).attr('name')).text($(this).text());
